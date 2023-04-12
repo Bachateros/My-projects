@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1652969891 source:d:\program\Ñ\lesson0\dog and apple\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<locale.h>
+
+1652969891 source:d:\projects\lesson0\dog and apple\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<locale.h>
+

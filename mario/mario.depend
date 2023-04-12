@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1665515542 source:d:\program\Ñ\lesson0\mario\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<windows.h>
+

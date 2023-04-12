@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1666352139 source:d:\program\Ñ\lesson0\qvest\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<windows.h>
+
+1666352139 source:d:\projects\lesson0\qvest\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<windows.h>
+
+1666867957 source:d:\projects\qvest\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<windows.h>
+

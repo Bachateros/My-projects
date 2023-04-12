@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1661330973 source:d:\program\Ñ\lesson0\arcanoid\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	<windows.h>
+	<math.h>
+

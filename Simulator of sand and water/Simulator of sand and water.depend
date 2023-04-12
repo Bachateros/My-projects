@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1674511007 source:d:\projects\simulator of sand and water\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+

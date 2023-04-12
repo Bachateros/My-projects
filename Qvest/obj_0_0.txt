@@ -1,0 +1,16 @@
+NPC
+N
+2
+2
+I'm hungry!Give me 5 aplles.
+Apple
+5
+NPC's key
+Door
+/
+18
+30
+I need NPC's key!
+NPC's key
+1
+-

@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1680155273 source:d:\projects\time for 20 years\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<locale.h>
+	<windows.h>
+
