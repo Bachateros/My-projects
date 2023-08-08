@@ -1,0 +1,109 @@
+/*---COLORS---------------*/
+$lightBlack: #272937;
+$MainColor: rgba(39, 41, 55, 0.75);
+$lightGray: rgba(39,41,55,.05);
+/*----------------------*/
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+._container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 10px 10px;
+    box-sizing: content-box;
+}
+.text-block{
+    &__logo {
+        display: flex;
+        background: $lightGray;
+        border-radius: 16px;
+        align-items: center;
+        padding: 0 12px 0 8px;
+        margin-bottom: 20px;
+    }
+    .logo {
+        height: 32px;
+        &__icon {
+            margin: 0 6px 0 0;
+        }
+        &__text {
+            font-weight: 600;
+            letter-spacing: -1px;
+        }
+    }
+    text-align: center;
+    &__title{
+        font-size: 60px;
+        font-weight: 600;
+        line-height: calc(60/56*100%);
+        letter-spacing: -2px;
+        color: $lightBlack;
+    }
+    &__text{
+        font-size: 20px;
+        line-height: calc(28/20*100%);
+        font-weight: 400;
+        letter-spacing: -0.8px;
+        color: $MainColor;
+    }
+}
+@media(max-width: 1429px){
+    .text-block{
+        padding: 0;
+    }
+    ._container {
+        max-width: 1150px;
+    }
+}
+@media(max-width: 1149px){
+    .text-block{
+        margin-top: 0;
+        //max-width: 80%;
+        align-self: center;
+        &__title{
+            font-size: 350%;
+        }
+        &__text{
+            font-size: 130%;
+        }
+    }
+    ._container {
+        max-width: 770px;
+    }
+}
+@media(max-width: 769px){
+    .text-block{
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+        max-width: 80%;
+        align-self: center;
+        &__title{
+            font-size: 32px;
+        }
+        &__text{
+            font-size: 14px;
+        }
+    }
+    ._container {
+        max-width: 575px;
+    }
+}
+@media(max-width: 539px){
+    .text-block{
+        display: flex;
+        flex-direction: column;
+        max-width: 80%;
+        align-self: center;
+        max-width: 85%;
+        &__title{
+            font-size: 250%;
+        }
+        &__text{
+            font-size: 110%;
+        }
+    }    
+}

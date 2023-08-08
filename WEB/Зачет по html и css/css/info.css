@@ -1,0 +1,81 @@
+@import "/css/general_blocks.css";
+.info__container {
+  background: #f3f2f3;
+  padding: 50px !important;
+  text-align: center;
+  border-radius: 20px;
+}
+.info__title {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 32px;
+  letter-spacing: -0.03em;
+}
+.info__text {
+  font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: 24px;
+  letter-spacing: -0.04em;
+}
+.info__message {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+.info__input {
+  width: 260px;
+  margin-right: 12px;
+  height: 48px;
+  font-size: 16px;
+  padding: 0 16px;
+  border-radius: 7px;
+}
+.info__butt {
+  background: #7000fe;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  height: 48px;
+  padding: 0 12px;
+  width: 140px;
+  border-radius: 7px;
+}
+.info__butt:hover {
+  background: #6b02f4;
+}
+.info__butt:active {
+  background: #7000fe;
+}
+.info__note {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.3px;
+  opacity: 0.5;
+}
+@media (max-width: 1429px) {
+  .info__title {
+    font-size: 44px;
+    margin-bottom: 24px;
+  }
+  .info__text {
+    font-size: 16px;
+  }
+}
+@media (max-width: 769px) {
+  .info__title {
+    font-size: 32px;
+  }
+  .info__text {
+    font-size: 14px;
+  }
+  .info__message {
+    flex-direction: column;
+  }
+  .info__message > * {
+    width: 100%;
+  }
+  .info__input {
+    margin-bottom: 12px;
+  }
+}

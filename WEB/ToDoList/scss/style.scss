@@ -1,0 +1,154 @@
+@import '/css/zero_style.css';
+@import '/css/generalBlocks.css';
+
+$grey:#f0f0f0;
+$darkerGrey: #e5e5e5;
+$darkestGrey: #dddddd;
+$lighterGrey: #f6f6f6;
+$lightestGrey: #fdfdfd;
+
+.wrapper {
+    .header {
+        background: $grey;
+        width: 100%;
+        &__container {
+            height: 60px;
+            display: grid;
+            grid-template-columns: 2fr 15fr 5fr 2fr;
+            align-items: center;
+        }
+        &__title {
+            font-size: 36px;
+            letter-spacing: 5px;
+            grid-column-start: 2;
+            font-weight: 700;
+        }
+        &__clock {
+            font-size: 26px;
+            letter-spacing: 3px;
+            font-weight: 600;
+            //transition-duration: 3s;
+            justify-self: end;
+        }
+    }
+    @media(max-width: 516px){
+        .header {
+            &__container {
+                height: 80px;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(2, 1fr);
+                //row-gap: 10px;
+            }
+            &__title {
+                grid-column-start: 1;
+                justify-self: center;
+            }
+            &__clock {
+                justify-self: center;
+            }
+        }
+    }
+    .main {
+        flex: 1 1 auto;
+        &__container {
+            
+            margin-top: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &>*{
+                width: 50%;
+            }
+        }
+        &__newTask {
+            display: flex;
+            height: 50px;
+            &>*{
+                font-size: 16px;
+                border-radius: 15px;
+                padding: 10px;
+            }
+        }
+        .newTask {
+            &__pole {
+                background: $grey;
+                width: 90%;
+                font-size: 24px;
+                margin-right: 15px;
+                text-align: center;
+                &:focus{
+                    background: $lighterGrey;
+                    border:2px  #adf  solid;
+                    box-shadow: #adf 2px -2px 20px 2px;
+                    transition-duration: 100ms;
+                }
+            }
+            &__button {
+                font-weight: 600;
+                letter-spacing: -.5px;
+                &:hover{
+                    background: $lighterGrey;
+                    transform: scale(110%);
+                    transition-duration: 200ms;
+                }
+                &:active{
+                    background: $lightestGrey;
+                }
+            }
+        }
+        &__tasks {
+            margin-top: 50px;
+        }
+        .tasks {
+            border: 3px dotted $darkestGrey;
+            background: $darkerGrey;
+            padding: 10px;
+            &__list {
+                &>*:not(:last-child){
+                    margin-bottom: 25px;
+                }
+            }
+            &__task {
+                background: #fff;
+                padding: 10px;
+                border-radius: 15px;
+                display: flex;
+                font-size: 18px;
+            }
+            .task {
+                &__checkbox {
+                    transform: scale(2);
+                    background: #000; 
+                }
+                
+                &__text {
+                    margin-left: 15px;
+                    flex: 1 1 auto;
+                    
+                }
+                &__butt {
+                    width: 1em;
+                    height: 1em;
+                    align-self: center;
+                    display: flex;
+                    padding: 12px;
+                    justify-content: center;
+                    align-items: center;
+
+                    font-weight: 700;
+                    background: #fff;
+                    font-size: 1.1em;
+                    border: 1px solid black;
+                    border-radius: 25%;
+                    box-shadow: 1.5px -1px;
+                }
+            }
+        }
+    }
+    .footer {
+        background: inherit;
+    }
+    .check{
+        text-decoration: line-through;
+    }
+}

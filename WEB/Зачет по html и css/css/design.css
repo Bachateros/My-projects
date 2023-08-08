@@ -1,0 +1,116 @@
+@import "/css/general_blocks.css";
+.design__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.design__main-block {
+  display: flex;
+  flex-direction: column;
+}
+.design__text-block {
+  max-width: 1020px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.design .text-block__title {
+  margin-bottom: 32px;
+}
+.design .text-block__text {
+  max-width: 453px;
+  text-align: center;
+}
+.design__row {
+  display: flex;
+  height: 82.4px;
+  margin: 60px 5px 5px 5px;
+  padding: 0 -5px;
+}
+.design .row__column {
+  width: 255px;
+}
+.design .row__column:not(:last-child) {
+  border-right: 2px solid rgba(39, 41, 55, 0.05);
+}
+.design .row__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.design .row .item__img {
+  width: 54px;
+  height: 44px;
+  margin: 0 0 10px 0;
+}
+.design .row .item__text {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.035em;
+}
+@media (max-width: 1149px) {
+  .design .row__column {
+    width: 188px;
+    height: 79.6px;
+  }
+}
+@media (max-width: 794px) {
+  .design__row {
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+  }
+  .design .row__column {
+    box-sizing: content-box;
+    width: 272.5px;
+    padding: 15px;
+  }
+  .design .row__column:nth-child(2) {
+    border: none;
+    margin: 0 0 20px;
+  }
+  .design .row__column:nth-child(3) {
+    position: relative;
+  }
+  .design .row__column:nth-child(3)::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    top: -10px;
+    left: 0;
+    border-top: 2px solid rgba(39, 41, 55, 0.05);
+  }
+}
+@media (max-width: 769px) {
+  .design .row__column {
+    width: 200px;
+    padding: 15px;
+  }
+}
+@media (max-width: 650px) {
+  .design__row {
+    margin-top: 30px;
+  }
+  .design .row__column {
+    max-width: 30%;
+  }
+  .design .row__column:nth-child(3)::before {
+    content: "";
+    position: absolute;
+    width: 190%;
+    top: -10px;
+    left: 5px;
+    border-top: 2px solid rgba(39, 41, 55, 0.05);
+  }
+  .design .row__item {
+    text-align: center;
+  }
+}
+.design__img {
+  margin-top: 60px;
+}
+.design__img img {
+  width: 100%;
+}

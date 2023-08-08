@@ -1,0 +1,136 @@
+@import "/css/general_blocks.css";
+.instructions__column {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  align-items: center;
+  justify-content: center;
+}
+.instructions .instructions-item {
+  width: 1400px;
+  display: flex;
+  border: 2px solid #f0f0f1;
+  box-shadow: 0 0 20px white;
+  border-radius: 20px;
+}
+.instructions .instructions-item__main-block {
+  flex: 0 1 50%;
+  padding: 30px;
+}
+.instructions .instructions-item .main-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.instructions .instructions-item .main-block__logo {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.instructions .instructions-item .main-block .text-block {
+  max-width: 470px;
+}
+.instructions .instructions-item .main-block .text-block__title {
+  margin-bottom: 32px;
+}
+.instructions .instructions-item .main-block .advantages {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+.instructions .instructions-item .main-block .advantages__element {
+  padding: 7px 10px;
+}
+.instructions .instructions-item .main-block_blue .main-block__logo {
+  background: rgba(25, 188, 254, 0.2);
+  color: #19bcfe;
+}
+.instructions .instructions-item .main-block_green {
+  order: 2;
+}
+.instructions .instructions-item .main-block_green .main-block__video {
+  order: 1;
+}
+.instructions .instructions-item .main-block_green .main-block__logo {
+  background: rgba(9, 207, 131, 0.2);
+  color: #09cf83;
+}
+.instructions .instructions-item .main-block_red .main-block__logo {
+  background: rgba(242, 78, 30, 0.2);
+  color: #f24e1e;
+}
+.instructions .instructions-item__video video {
+  width: 700px;
+}
+@media (max-width: 1429px) {
+  .instructions .instructions-item {
+    width: 1120px;
+    height: 560px;
+  }
+  .instructions .instructions-item .advantages {
+    flex-wrap: wrap;
+  }
+  .instructions .instructions-item .advantages__element:last-child {
+    margin: 0 auto;
+  }
+  .instructions .instructions-item__video video {
+    width: 560px;
+  }
+}
+@media (max-width: 1149px) {
+  .instructions .instructions-item {
+    max-width: 740px;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .instructions .instructions-item .advantages {
+    flex-wrap: nowrap;
+  }
+  .instructions .instructions-item .advantages__element:last-child {
+    margin: 0;
+  }
+  .instructions .instructions-item .main-block .text-block {
+    margin: 64px 0;
+    max-width: 400px;
+  }
+  .instructions .instructions-item .main-block_green {
+    order: 0;
+  }
+  .instructions .instructions-item .main-block_green .main-block__video {
+    order: 1;
+  }
+  .instructions .instructions-item__video video {
+    width: 100%;
+  }
+}
+@media (max-width: 769px) {
+  .instructions .instructions-item {
+    max-width: 545px;
+  }
+  .instructions .instructions-item .main-block .text-block {
+    margin: 29px 0 32px;
+    max-width: 400px;
+  }
+  .instructions .instructions-item .main-block__advantages {
+    align-self: start;
+  }
+  .instructions .instructions-item .advantages {
+    flex-direction: column;
+  }
+  .instructions .instructions-item .advantages__element {
+    font-size: 14px;
+  }
+  .instructions .instructions-item__video video {
+    width: 100%;
+  }
+}

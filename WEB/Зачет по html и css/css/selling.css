@@ -1,0 +1,316 @@
+/*---COLORS---------------*/
+/*----------------------*/
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+._container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 10px;
+  box-sizing: content-box;
+}
+
+.text-block {
+  text-align: center;
+}
+.text-block__logo {
+  display: flex;
+  background: rgba(39, 41, 55, 0.05);
+  border-radius: 16px;
+  align-items: center;
+  padding: 0 12px 0 8px;
+  margin-bottom: 20px;
+}
+.text-block .logo {
+  height: 32px;
+}
+.text-block .logo__icon {
+  margin: 0 6px 0 0;
+}
+.text-block .logo__text {
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+.text-block__title {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 107.1428571429%;
+  letter-spacing: -2px;
+  color: #272937;
+}
+.text-block__text {
+  font-size: 20px;
+  line-height: 140%;
+  font-weight: 400;
+  letter-spacing: -0.8px;
+  color: rgba(39, 41, 55, 0.75);
+}
+
+@media (max-width: 1429px) {
+  .text-block {
+    padding: 0;
+  }
+  ._container {
+    max-width: 1150px;
+  }
+}
+@media (max-width: 1149px) {
+  .text-block {
+    margin-top: 0;
+    align-self: center;
+  }
+  .text-block__title {
+    font-size: 350%;
+  }
+  .text-block__text {
+    font-size: 130%;
+  }
+  ._container {
+    max-width: 770px;
+  }
+}
+@media (max-width: 769px) {
+  .text-block {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    max-width: 80%;
+    align-self: center;
+  }
+  .text-block__title {
+    font-size: 32px;
+  }
+  .text-block__text {
+    font-size: 14px;
+  }
+  ._container {
+    max-width: 575px;
+  }
+}
+@media (max-width: 539px) {
+  .text-block {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    align-self: center;
+    max-width: 85%;
+  }
+  .text-block__title {
+    font-size: 250%;
+  }
+  .text-block__text {
+    font-size: 110%;
+  }
+}
+.selling__container {
+  display: grid;
+  grid-template: 3fr 1fr/1fr;
+  row-gap: 50px;
+}
+.selling__sell-block {
+  display: grid;
+  gap: 40px;
+  grid-template: 1fr 0.8fr/repeat(3, 1fr);
+  grid-template-areas: "title purple-card card" "safe purple-card card";
+}
+.selling .sell-block__title {
+  grid-area: title;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 100%;
+  margin: 0 0 32px;
+  letter-spacing: -2px;
+}
+.selling .sell-block__safe {
+  grid-area: safe;
+  display: flex;
+  align-self: end;
+}
+.selling .sell-block__icon {
+  width: 48px;
+  height: 48px;
+  margin-right: 15px;
+  background: rgba(72, 181, 39, 0.1);
+  border-radius: 7px;
+  padding: 12px;
+}
+.selling .sell-block__text {
+  font-size: 12px;
+  opacity: 0.75;
+  line-height: 1.5;
+}
+.selling .sell-block__card {
+  grid-area: card;
+}
+.selling .card {
+  display: flex;
+  flex-direction: column;
+}
+.selling .card__head {
+  display: grid;
+  row-gap: 15px;
+  column-gap: 3px;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 20px 20px 0 0;
+  border: 2px solid black;
+  border-bottom: none;
+}
+.selling .card__title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.125;
+}
+.selling .card__text {
+  font-size: 16px;
+  letter-spacing: -0.6px;
+  opacity: 0.93;
+  grid-row-start: 2;
+  grid-column: span 2;
+}
+.selling .card__price {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.125;
+  justify-self: end;
+}
+.selling .card__old-price {
+  font-size: 0.75em;
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.selling .card__body {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  border-radius: 0 0 20px 20px;
+  padding: 30px;
+  border: 2px solid black;
+  border-top: none;
+}
+.selling .card__list {
+  font-size: 16px;
+  font-weight: 600;
+  flex: 1 1 auto;
+}
+.selling .card__list > * {
+  margin-bottom: 20px;
+}
+.selling .card__butt {
+  display: inline-block;
+  margin-top: auto;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  background: #000;
+  color: white;
+  height: 48px;
+  padding: 16px 12px;
+  border: 2px solid black;
+  border-radius: 7px;
+}
+.selling .card__butt:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+.selling .card__butt:active {
+  background: rgba(0, 0, 0, 0.7);
+}
+.selling .card_purple {
+  grid-area: purple-card;
+}
+.selling .card_purple .card__head {
+  color: white;
+  background: #6500e6;
+}
+.selling .card_purple .card__body {
+  color: white;
+  background: #7000fe;
+}
+.selling .card_purple .card__butt {
+  background: white;
+  color: #7000fe;
+  border-color: white;
+}
+.selling .card_purple .card__butt:hover {
+  background: #f0f0f0;
+}
+.selling .card_purple .card__butt:active {
+  background: #dfdfdf;
+}
+.selling__help-block {
+  padding: 80px 0 0 0;
+}
+.selling .help-block {
+  border-top: 2px solid rgba(0, 0, 0, 0.05);
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.selling .item__title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+}
+.selling .item__text {
+  font-size: 16px;
+  margin-top: 10px;
+}
+@media (max-width: 1149px) {
+  .selling__sell-block {
+    display: grid;
+    gap: 0px;
+    grid-template: 0.7fr 2fr 0.3fr/1fr 1fr;
+    grid-template-areas: "title title" "purple-card card" "safe safe";
+    column-gap: 10px;
+    row-gap: 15px;
+  }
+  .selling .sell-block__title {
+    font-size: 60px;
+    text-align: center;
+  }
+  .selling .sell-block__safe {
+    justify-self: center;
+    align-self: start;
+  }
+  .selling .sell-block__safe p {
+    align-self: center;
+  }
+  .selling__help-block {
+    padding-top: 10px;
+  }
+  .selling .help-block {
+    grid-template: repeat(3, 1fr)/1fr;
+    justify-content: center;
+  }
+}
+@media (max-width: 769px) {
+  .selling__sell-block {
+    grid-template: 0.2fr/1fr;
+    grid-template-areas: "title" "purple-card" "card" "safe";
+    column-gap: 10px;
+    row-gap: 15px;
+  }
+  .selling .sell-block__title {
+    font-size: 44px;
+  }
+  .selling .card__head {
+    padding: 25px;
+  }
+  .selling .card__title, .selling .card__price {
+    font-size: 24px;
+  }
+  .selling .card__text {
+    font-size: 16px;
+    letter-spacing: -0.6px;
+    opacity: 0.93;
+  }
+  .selling .card__butt {
+    font-size: 14px;
+  }
+}

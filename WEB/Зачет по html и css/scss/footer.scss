@@ -1,0 +1,119 @@
+@import "/css/general_blocks.css";
+
+$grey:rgba(39,41,55,.35);
+$lime: #09cf83;
+.footer {
+    margin-top: 100px;
+    padding-bottom: 20px;
+    &__container {
+        display: grid;
+        grid-template:4fr 1fr/3fr 1fr 1fr 2fr;
+    }
+    &__logo {
+
+    }
+    .logo {
+        &__link {
+            font-size: 35px;
+            font-weight: 700;
+            color: inherit;
+        }
+        &__text {
+            margin-top: 10px;
+            opacity: .35;
+        }
+    }
+    &__menu {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.5;
+        margin: 0 0 11px;
+        &>*{
+            margin-top: 11px;
+        }
+    }
+    &__item {
+        list-style-type: none;
+        font-weight: normal;
+        & a{
+            color: inherit;
+        }
+    }
+    &__item_disable {
+        & a{
+            color: $grey;
+            pointer-events: none;
+        }
+        & span{
+            font-size: 12px;
+            font-weight: 600;
+            color: $lime;
+            position: relative;
+            line-height: 1.33;
+            top: -5px;
+            left: 5px;
+        }
+    }
+    &__mail {
+        margin-bottom: 11px;
+    }
+    .mail {
+        &__title {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.5;
+            margin-bottom: 1px;
+        }
+        &__link {
+            font-size: 24px;
+            line-height: 1.16;
+            color: inherit;
+        }
+        &__text {
+            margin-top: 11px;
+            line-height: 1.42;
+            opacity: .35;
+        }
+    }
+    &__copy {
+        opacity: .35;
+    }
+    @media(max-width:1149px){
+        &__container {
+            grid-template: repeat(3,minmax(10px,auto))/repeat(3,1fr);
+            row-gap: 20px;
+        }
+        &__logo{
+            grid-column: 2;
+            grid-row: 2;
+            justify-content: center;
+        }
+        &__copy{
+            grid-column: 2;
+            grid-row: 3;
+        }
+    }
+    @media(max-width:769px){
+        margin-top:50px;
+        &__container {
+            grid-template: repeat(5,1fr)/1fr minmax(auto,290) 1fr;
+            row-gap: 50px;
+            &>*{
+                grid-column: 2/3;
+                justify-self: center;
+            }
+            
+        }
+        &__logo{
+            grid-row: 4;
+        }
+        &__copy{
+            grid-row: 5;
+        }
+        .mail {
+            &>*{
+                text-align: center;
+            }
+        }
+    }
+}

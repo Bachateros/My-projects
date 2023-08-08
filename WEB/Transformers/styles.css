@@ -1,0 +1,70 @@
+h1, span {
+  font-family: 'DotGothic16', sans-serif;
+}
+
+body {
+  background: #010123;
+}
+
+h1 {
+  font-size: 35px;
+  text-align: center;
+  color: rgb(243, 184, 64);
+  margin-top: 70px;
+}
+
+.arena {
+  width: 1000px;
+  margin: 50px auto;
+  display: flex;
+  border: 1px solid rgb(243, 184, 64);
+}
+
+.arena-side {
+  width: 49%;
+}
+
+.bot {
+  height: 210px;
+  width: 100px;
+  position: relative;
+  transition: .3s;
+  margin: 20px;
+  margin-bottom: 70px;
+  margin-top: 30px;
+  float: left;
+}
+
+.bot span {
+  position: absolute;
+  bottom: -43px;
+  transition: .3s;
+  color: rgb(243, 184, 64);
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.bot span.name {
+  position: absolute;
+  bottom: -16px;
+  transition: .3s;
+  color: rgb(243, 184, 64);
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.arena-side-1 {
+  border-right: 1px solid rgb(243, 184, 64);
+}
+
+.arena-side-1 .bot {
+  background: url('./images/side1.png') center center no-repeat;
+  background-size: contain;
+}
+
+.arena-side-2 .bot {
+  background: url('./images/side2.png') center center no-repeat;
+  background-size: contain;
+}

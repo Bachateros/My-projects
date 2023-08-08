@@ -1,0 +1,47 @@
+%__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+%__main-block{
+    display: flex;
+    flex-direction: column;
+}
+%__text-block {
+    max-width: 1020px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+%__buttons{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: calc(24/26*100%);
+    letter-spacing: -0.6px;
+
+    display: flex;
+}
+
+$black:#000;
+$white: #fff;
+
+%__link{
+    color: inherit;
+    min-width: 160px;
+    min-height: 48px;
+    padding: 0px 4px;
+    border: 2px solid $black;
+    border-radius: 5px;
+    background: $white;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center; 
+}
+$purple:#7000FE;
+%__link_purple{
+    padding: 0px 17px;
+    color:$white;
+    background: $purple;
+    border: none;
+    margin: 0 20px 0 0; 
+}

@@ -1,0 +1,253 @@
+@import "./general_blocks.scss";
+
+$lightGreen:rgba(72,181,39,.1);
+$darkPurple: #6500e6;
+$purple: #7000fe;
+$cream: rgba(0,0,0,.05);
+$lightGrey:#f0f0f0;
+$grey:#dfdfdf;
+$lightBlack:rgba(0,0,0,.8);
+$light-lightBlack:rgba(0,0,0,.7);
+
+.selling {
+    &__container {
+        display: grid;
+        grid-template: 3fr 1fr/ 1fr;
+        row-gap: 50px;
+    }
+    &__sell-block {
+        display: grid;
+        gap: 40px;
+        grid-template: 1fr .8fr/ repeat(3,1fr);
+        grid-template-areas: "title purple-card card"
+                             "safe purple-card card";
+    }
+    .sell-block {
+        &__title {
+            grid-area: title;
+            font-size: 72px;
+            font-weight: 700;
+            line-height: 100%;
+            margin: 0 0 32px;
+            letter-spacing: -2px;
+        }
+        &__safe {
+            grid-area: safe;
+            display: flex;
+            align-self: end;
+        }
+        &__icon {
+            width: 48px;
+            height: 48px;
+            margin-right: 15px;
+            background: $lightGreen;
+            border-radius: 7px;
+            padding: 12px;
+        }
+        &__text {
+            font-size: 12px;
+            opacity: .75;
+            line-height: 1.5;
+        }
+        &__card {
+            grid-area: card;
+        }
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+        &__head {
+            display: grid;
+            //grid-template: 1fr 1fr / 6.2fr 3.8fr;
+            row-gap: 15px;
+            column-gap: 3px;
+            padding: 30px;
+            background: $cream;
+            border-radius: 20px 20px 0 0;
+            border: 2px solid black;
+            border-bottom: none;
+        }
+        &__title {
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 1.125;
+        }
+        &__text {
+            font-size: 16px;
+            letter-spacing: -.6px;
+            opacity: .93;
+            grid-row-start: 2;
+            grid-column: span 2;
+        }
+        &__price {
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 1.125;
+            justify-self: end;
+        }
+        &__old-price {
+            font-size: 0.75em;
+            //margin-right: 8px;
+            text-decoration: line-through;
+            opacity: .5;
+        }
+        &__body {
+            flex: 1 1 auto;
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            border-radius: 0 0 20px 20px;
+            padding: 30px;
+            border: 2px solid black;
+            border-top: none;
+        }
+        &__list {
+            font-size: 16px;
+            font-weight: 600;
+            &>*{
+                margin-bottom: 20px;
+            }
+            flex: 1 1 auto;
+        }
+        &__item {
+        }
+        &__icon {
+        }
+        &__butt {
+            display: inline-block;
+            margin-top: auto;
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 600;
+            background: #000;
+            color: white;
+            height: 48px;
+            padding: 16px 12px;
+            border: 2px solid black;
+            border-radius: 7px;
+            &:hover{
+                background: $lightBlack;
+            }
+            &:active{
+                background: $light-lightBlack;
+            }
+        }
+    }
+    .card_purple {
+        grid-area: purple-card;
+        .card{
+            &__head{
+                color: white;
+                background: $darkPurple;
+            }
+            &__body {
+                color: white;
+                background: $purple;
+            }
+            &__butt {
+                background: white;
+                color:$purple;
+                border-color: white;
+                &:hover{
+                    background: $lightGrey;
+                }
+                &:active{
+                    background: $grey;
+                }
+            }
+        }
+    }
+    &__help-block {
+        padding: 80px 0 0 0;
+    }
+    .help-block {
+        border-top: 2px solid $cream;
+        display: grid;
+        grid-gap: 40px;
+        grid-template-columns: repeat(3,1fr);
+        &__item {
+        }
+    }
+    .item {
+        &__title {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 28px;
+
+        }
+        &__text {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+    }
+    @media(max-width:1149px){
+        
+        &__sell-block {
+            display: grid;
+            gap: 0px;
+            grid-template: .7fr 2fr .3fr/1fr 1fr;
+            grid-template-areas: "title title"
+                                 "purple-card card"
+                                 "safe safe";
+                                 
+            column-gap: 10px;
+            row-gap: 15px;
+        }
+        .sell-block {
+            &__title {
+                font-size: 60px;
+                //align-self: center;
+                text-align: center;
+            }
+            &__safe {
+                justify-self: center;
+                align-self: start;
+                
+                p{
+                    align-self: center;
+                }
+            }
+        }
+        &__help-block{
+            padding-top: 10px;
+        }
+        .help-block {
+            grid-template: repeat(3,1fr) / 1fr;
+            justify-content: center;
+        }
+    }
+    @media(max-width:769px){
+        &__sell-block {
+            grid-template: .2fr/1fr;
+            grid-template-areas: "title"
+                                 "purple-card"
+                                 "card"
+                                 "safe";
+                                 
+            column-gap: 10px;
+            row-gap: 15px;
+        }
+        .sell-block {
+            &__title {
+                font-size: 44px;
+            }
+        }
+        .card {
+            &__head{
+                padding: 25px;
+            }
+            &__title, &__price {
+                font-size: 24px;
+            }
+            &__text{
+                font-size: 16px;
+                letter-spacing: -.6px;
+                opacity: .93;
+            }
+            &__butt{
+                font-size: 14px;
+            }
+        }
+    }
+}

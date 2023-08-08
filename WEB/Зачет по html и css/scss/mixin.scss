@@ -1,0 +1,43 @@
+@import "./extend.scss";
+$lightGray:rgba(39,41,55,.05);
+@mixin describe-block(){
+    &__container {
+        @extend %__container;
+    }
+    &__main-block {
+        @extend %__main-block;
+    }
+    &__text-block {
+        @extend %__text-block;
+    }
+    .text-block{
+        &__title {
+            margin-bottom: 32px;
+        }
+        &__text {
+            max-width: 453px;
+            text-align: center;
+        }
+    }
+}
+$grey: #f0f0f0;
+$DarkPurple:#6500e9;
+@mixin buttons(){
+    &__buttons {
+        @extend %__buttons;
+    }
+    &__link {
+        @extend %__link;
+        &:hover{
+            transition-duration:.5s;
+            background: $grey; 
+        }
+    }
+    &__link_purple {
+        @extend %__link_purple;
+        &:hover{
+            transition-duration:.5s;
+            background: $DarkPurple; 
+        }
+    }
+}

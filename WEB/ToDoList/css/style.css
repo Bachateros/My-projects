@@ -1,0 +1,131 @@
+@import '/css/zero_style.css';
+@import '/css/generalBlocks.css';
+.wrapper .header {
+  background: #f0f0f0;
+  width: 100%;
+}
+.wrapper .header__container {
+  height: 60px;
+  display: grid;
+  grid-template-columns: 2fr 15fr 5fr 2fr;
+  align-items: center;
+}
+.wrapper .header__title {
+  font-size: 36px;
+  letter-spacing: 5px;
+  grid-column-start: 2;
+  font-weight: 700;
+}
+.wrapper .header__clock {
+  font-size: 26px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  justify-self: end;
+}
+@media (max-width: 516px) {
+  .wrapper .header__container {
+    height: 80px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .wrapper .header__title {
+    grid-column-start: 1;
+    justify-self: center;
+  }
+  .wrapper .header__clock {
+    justify-self: center;
+  }
+}
+.wrapper .main {
+  flex: 1 1 auto;
+}
+.wrapper .main__container {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrapper .main__container > * {
+  width: 50%;
+}
+.wrapper .main__newTask {
+  display: flex;
+  height: 50px;
+}
+.wrapper .main__newTask > * {
+  font-size: 16px;
+  border-radius: 15px;
+  padding: 10px;
+}
+.wrapper .main .newTask__pole {
+  background: #f0f0f0;
+  width: 90%;
+  font-size: 24px;
+  margin-right: 15px;
+  text-align: center;
+}
+.wrapper .main .newTask__pole:focus {
+  background: #f6f6f6;
+  border: 2px #adf solid;
+  box-shadow: #adf 2px -2px 20px 2px;
+  transition-duration: 100ms;
+}
+.wrapper .main .newTask__button {
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+.wrapper .main .newTask__button:hover {
+  background: #f6f6f6;
+  transform: scale(110%);
+  transition-duration: 200ms;
+}
+.wrapper .main .newTask__button:active {
+  background: #fdfdfd;
+}
+.wrapper .main__tasks {
+  margin-top: 50px;
+}
+.wrapper .main .tasks {
+  border: 3px dotted #dddddd;
+  background: #e5e5e5;
+  padding: 10px;
+}
+.wrapper .main .tasks__list > *:not(:last-child) {
+  margin-bottom: 25px;
+}
+.wrapper .main .tasks__task {
+  background: #fff;
+  padding: 10px;
+  border-radius: 15px;
+  display: flex;
+  font-size: 18px;
+}
+.wrapper .main .tasks .task__checkbox {
+  transform: scale(2);
+  background: #000;
+}
+.wrapper .main .tasks .task__text {
+  margin-left: 15px;
+  flex: 1 1 auto;
+}
+.wrapper .main .tasks .task__butt {
+  width: 1em;
+  height: 1em;
+  align-self: center;
+  display: flex;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  background: #fff;
+  font-size: 1.1em;
+  border: 1px solid black;
+  border-radius: 25%;
+  box-shadow: 1.5px -1px;
+}
+.wrapper .footer {
+  background: inherit;
+}
+.wrapper .check {
+  text-decoration: line-through;
+}

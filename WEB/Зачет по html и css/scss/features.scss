@@ -1,0 +1,80 @@
+@import "./general_blocks.scss";
+@import "./mixin.scss";
+$LightPurple:rgba(112,0,254,.1);
+.features {
+    @include describe-block;
+    &__table{
+        width: 100%;
+        margin-top: 40px;// -20px -40px -20px;
+
+    }
+    &__row {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    .row {
+        &__column {
+            flex: 0 1 25%;
+            padding: 40px 20px;
+        }
+        &__item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .item {
+            &__img {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                background: $LightPurple;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+            &__img img{
+            }
+            &__title {
+                font-size: 24px;
+                font-weight: 700;
+                line-height: calc(28/24*100%);
+                letter-spacing: -1px;
+                text-align: center;
+            }
+            &__text {
+                margin-top: 8px;
+                text-align: center;
+                font-size: 14px;
+                opacity: 0.75;
+                line-height: 1.5;
+            }
+            &__text_link{
+                color: inherit;
+                border-bottom: 2px solid $lightGray;
+                padding-bottom: 1px;
+            }
+        }
+    }
+    @media(max-width:1149px){
+        .row{
+            &__column {
+                flex: 0 1 30%;
+            }
+        }
+    }
+    @media(max-width:769px){
+        .row{
+            &__column {
+                flex: 0 1 100%;
+            }
+        }
+        .item {
+            &__text {
+                font-size: 10px;
+            }
+        }
+    }
+}

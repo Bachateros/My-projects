@@ -1,0 +1,180 @@
+@import "/css/general_blocks.css";
+
+$White: white;
+$Gray: #f0f0f1;
+$Blue: #19bcfe;
+$LightBlue: rgba(25,188,254,.2);
+$Green: #09cf83;
+$LightGreen: rgba(9,207,131,.2);
+$Red: #f24e1e;
+$LightRed: rgba(242,78,30,.2);
+
+.instructions {
+    &__container {
+    }
+    &__column {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 60px;
+        //flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    &_item {
+    }
+    .instructions-item {
+        width: 1400px;
+        display: flex;
+        
+        border: 2px solid $Gray;
+        box-shadow: 0 0 20px $White;
+        border-radius: 20px;
+        
+        &__main-block {
+            flex: 0 1 50%;
+            padding: 30px;
+        }
+        .main-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            &__logo {
+                font-size: 30px;
+                font-weight: 700;
+                line-height: 1;
+                width:60px;
+                height: 60px;
+                border-radius: 50%;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+            }
+            &__text-block {
+            }
+            .text-block {
+                max-width: 470px;
+                &__title {
+                    margin-bottom: 32px;
+                }
+                &__text {
+                }
+            }
+            &__advantages {
+            }
+            .advantages {
+                display: flex;
+                justify-content: space-between;
+                font-size: 16px;
+                line-height: 1.5;
+                font-weight: 600;
+                
+                &__element {
+                    padding: 7px 10px;
+                }
+            }
+            &_blue{
+                .main-block__logo{
+                    background: $LightBlue;
+                    color: $Blue;
+                }
+            }
+            &_green{
+                .main-block__video{
+                    order: 1;
+                }
+                order: 2;
+                .main-block__logo{
+                    background: $LightGreen;
+                    color: $Green;
+                }
+            }
+            &_red{
+                .main-block__logo{
+                    background: $LightRed;
+                    color: $Red;
+                }
+            }
+        }
+        &__video {
+            video{
+                width: 700px;
+            }    
+        }
+    }
+    @media(max-width:1429px) {
+        .instructions-item{
+            width: 1120px;
+            height: 560px;
+            .advantages{
+                
+                flex-wrap: wrap;
+                &__element:last-child{
+                    margin: 0 auto;
+                }
+            }
+            &__video {
+                video{
+                    width: 560px;
+                }    
+            }
+        }
+    }
+    @media(max-width:1149px) {
+        .instructions-item{
+            max-width: 740px;
+            height: 100%;
+            flex-direction: column;
+            align-items: center;
+            .advantages{
+                flex-wrap: nowrap;
+                &__element:last-child{
+                    margin: 0;
+                }
+            }
+            .main-block{
+                .text-block{
+                    margin: 64px 0;
+                    max-width: 400px;
+                }
+                &_green{
+                    order: 0;
+                    .main-block__video{
+                        order: 1;
+                    }
+                }
+            }
+            &__video {
+                video{
+                    width: 100%;
+                }    
+            }
+        }
+    }
+    @media(max-width:769px) {
+        .instructions-item{
+            max-width: 545px;
+            .main-block{
+                .text-block{
+                    margin: 29px 0 32px;
+                    max-width: 400px;
+                }
+                &__advantages{
+                    align-self: start;
+                }
+            }
+            .advantages{
+                flex-direction: column;
+                &__element{
+                    font-size: 14px;
+
+                }
+            }
+            &__video {
+                video{
+                    width: 100%;
+                }    
+            }
+        }
+    }
+}

@@ -1,0 +1,88 @@
+@import "/css/general_blocks.css";
+
+$LightGrey:#f3f2f3;
+$Purple: #7000fe;
+$darkPurple: #6b02f4;
+.info {
+    &__container {
+        background: $LightGrey;
+        padding: 50px!important;
+        text-align: center;
+        border-radius: 20px;
+    }
+    &__title {
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 1;
+        margin-bottom: 32px;
+        letter-spacing: -.03em;
+    }
+    &__text {
+        font-size: 20px;
+        line-height: 1.4;
+        margin-bottom: 24px;
+        letter-spacing: -.04em;
+    }
+    &__message {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+    }
+    &__input {
+        width: 260px;
+        margin-right: 12px;
+        height: 48px;
+        font-size: 16px;
+        padding: 0 16px;
+        border-radius: 7px;
+    }
+    &__butt {
+        background: $Purple;
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+        height: 48px;
+        padding: 0 12px;
+        width: 140px;
+        border-radius: 7px;
+        &:hover{
+            background: $darkPurple;
+        }
+        &:active{
+            background: $Purple;
+        }
+    }
+    &__note {
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: .3px;
+        opacity: .5;
+    }
+
+    @media(max-width: 1429px){
+        &__title{
+            font-size: 44px;
+            margin-bottom: 24px;
+        }
+        &__text{
+            font-size: 16px;
+        }
+    }
+    @media(max-width: 769px){
+        &__title{
+            font-size: 32px;
+        }
+        &__text{
+            font-size: 14px;
+        }
+        &__message{
+            flex-direction: column;
+            &>*{
+                width: 100%;
+            }
+        }
+        &__input{
+            margin-bottom: 12px;
+        }
+    }
+}

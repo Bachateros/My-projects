@@ -1,0 +1,148 @@
+$black:#000;
+$white: #fff;
+$purple:#7000FE;
+$gray:#969696;
+@import "/css/general_blocks.css";
+@import "./mixin.scss";
+.wireframes { 
+    margin-top:45px;
+    &__container {
+        display: flex; 
+    }
+    &__main {  
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    &__text-block {
+        flex: 1 1 auto;
+        padding: 40% 0;
+    }
+    .text-block{
+        text-align: left;
+        &__title{
+            font-size: 450%;
+            font-weight: 700;
+        }
+        &__text{
+            font-size: 180%;
+            font-weight: 500;
+        }
+    }
+    &__text-block>*:not(:last-child){
+        margin: 0 0 24px 0;
+    }
+    @include buttons;
+    &__note {
+        font-size: 12px;
+        line-height: 1.5;
+        letter-spacing: -.035em;
+    }
+    &__img {
+    }
+    @media(max-width: 1428px){
+        .wireframes{
+        &__container{
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &__main{
+            margin-top: 4%;
+            max-width: 670px;
+            text-align: center;
+        }
+        &__main>*{
+            margin-bottom: 30px;
+        }
+        &__buttons{
+            justify-content: center;
+        }
+    }
+    .text-block{
+        text-align: center;
+        &__title{
+            font-size: 400%;
+        }
+        &__text{
+            font-size: 160%;
+        }
+    }
+    }
+    @media(max-width: 1148px){
+        .wireframes{
+        &__main{
+            margin-top: 4%;
+            max-width: 670px;
+            text-align: center;
+        }
+    }
+    .text-block{
+        &__title{
+            font-size: 350%;
+            font-weight: 600;
+        }
+        &__text{
+            font-size: 150%;
+            font-weight: 400;
+        }
+    }
+    }
+    @media(max-width: 769px){
+       .wireframes{
+        &__main{
+            margin-top: 5%;
+            max-width: 670px;
+            text-align: center;
+        }
+        &__buttons{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px; 
+        }
+        &__link{
+            flex: 1 1 100%;
+        }
+        &__link_purple{
+            margin-right: 0;
+        }
+        &__note {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            color: $gray;
+        }
+        &__note>img{
+            align-self: center;
+            max-width: 10%;
+            max-height: 100%;
+        }
+        &__img{
+            max-width: 100%;
+        }
+    }
+    .text-block{
+        &__title{
+            font-size: 350%;
+        }
+        &__text{
+            font-size: 130%;
+        }
+    }
+    }
+    @media(max-width: 539px){
+        .wireframes{
+        &__main{
+            max-width: 670px;
+            text-align: center;
+        }
+        }
+        .text-block{
+            &__title{
+                font-size: 300%;
+            }
+            &__text{
+                font-size: 120%;
+            }
+        }
+    }
+}

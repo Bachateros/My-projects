@@ -1,0 +1,119 @@
+//@import "./general_blocks.scss";
+@import "./mixin.scss";
+$LightGray: #f3f2f3;
+.example {
+    &__container {
+        display: flex;
+        justify-content: center;
+    }
+    &__row {
+        display: flex;
+        justify-content: space-between;
+    }
+    .row {
+        &__column {
+            flex: 0 1 49%;
+            background: $LightGray;
+            border-radius: 15px;
+        }
+        &__item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 0 0;
+        }
+    }
+    .item {
+        &__title {
+            font-size: 60px;
+            font-weight: 600;
+            line-height: 100%;
+            margin: 0 0 32px;
+            padding: 0 20px;
+            letter-spacing: -.03em;
+        }
+        &__text {
+            font-size: 20px;
+            line-height: calc(28/20*100%);
+            max-width: 460px;
+            margin: 0 10px 32px;
+            letter-spacing: -.04em;
+            text-align: center;
+        }
+
+        @include buttons;
+        &__buttons {
+            margin-bottom: 37px;
+        }
+        &__img {
+            width: 100%;
+        }
+    }
+    @media(max-width:1429px){
+        &__row {
+            max-width: 1120px;
+        }
+    }
+    @media(max-width:1149px){
+        &__row {
+            flex-wrap: wrap;
+            max-width: 740px;
+        }
+        .row {
+            &__column {
+                flex: 0 1 100%;
+            }
+            &__column:not(:last-child){
+                margin-bottom: 60px;
+            }
+        }
+        .item {
+            &__title {
+                font-size: 44px;
+                line-height: 48px;
+            }
+            &__text {
+                font-size: 16px;
+                line-height: calc(24/16*100%);
+                max-width: 400px;
+            }
+        }
+    }
+    @media(max-width:769px){
+        &__row {
+            max-width: 545px;
+        }
+        .row {
+            &__column:not(:last-child){
+                margin-bottom: 40px;
+            }
+        }
+        .item {
+            &__title {
+                font-size: 32px;
+                line-height: 36px;
+                margin: 0 0 24px;
+            }
+            &__text {
+                font-size: 14px;
+                line-height: calc(20/14*100%);
+                max-width: 100%;
+                margin: 0 0 24px;
+                padding: 0 20px;
+            }
+            &__buttons{
+                width: 100%;
+                padding: 0 20px;
+                margin-bottom: 32px;
+                display: flex;
+            }
+            &__link{
+                flex: 1 1 100%;
+            }
+            &__link_purple{
+                margin-right: 0;
+            }
+        }
+    }
+}

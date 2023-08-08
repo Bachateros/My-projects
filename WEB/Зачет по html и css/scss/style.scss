@@ -1,0 +1,61 @@
+@import "/css/zero_style.css";
+@import "/css/general_blocks.css";
+@import "/css/animation.css";
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+
+:root {
+    --animate-duration: 1s;
+    --animate-delay: 1s;
+    --animate-repeat: 1
+}
+
+/*---PAGE------*/
+.page {
+    flex: 1 1 auto;
+    &>*:not(:last-child){
+        margin-bottom: 200px;
+    }
+    &>*{
+        animation-name: fallInShadow;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        animation-play-state: none;
+    }
+}
+.page__wireframes {
+    background: #F2F2F2;
+}
+.page__design {
+}
+.page__instructions {
+}
+.page__base {
+}
+.page__features {
+}
+.page__example {
+}
+.page__selling {
+}
+.page__info {
+}
+/*----HEADER------------------------------------*/
+@import "./header.scss";
+/*---WIREFRAMES------*/
+@import "./wireframes.scss";
+/*---DESIGN---------------*/
+@import "./design.scss";
+/*---INSTRUCTIONS---------------*/
+@import "./instructions.scss";
+/*---BASE---------------*/
+@import "./base.scss";
+/*---FEATURES---------------*/
+@import "./features.scss";
+/*---EXAMPLE---------------*/
+@import "./example.scss";
+/*---SELLING---------------*/
+@import "/css/selling.css";
+/*---INFO---------------*/
+@import "/css/info.css";
+/*---FOOTER---------------*/
+@import "/css/footer.css";

@@ -1,0 +1,156 @@
+$LightGray:rgba(39,41,55,.75);
+$Dark: #272937;
+$Purple:#7000FE;
+.header{
+    &__row{
+        z-index: 100;
+        position: fixed;
+        width: 100%;
+        height: 60px;
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__container {
+        position: fixed;
+        background: #fff;
+        display: flex;
+        font-size: 15px;
+        line-height: 1.5;
+        letter-spacing: -.035em;    
+    }
+    &__main{
+        display: flex;
+        gap: 20px;
+        margin: 0 588px 0 0;
+    }
+    &__logo {        
+        font-size: 23px;
+        font-weight: 700;
+    }
+    &__text-ul {
+        align-self: center;
+        color: $LightGray;
+        display: flex;
+        column-gap: 20px;
+        opacity: 0.9;
+    }
+    &__item {
+    }
+    &__item::before {
+        position: relative;
+        margin-right: 5px;
+        content: "\2022";
+        opacity: 0.6;
+    }
+    &__nav {
+        font-weight: 600;
+    }
+    &__menu {
+        display: flex;
+        gap: 40px;
+    }
+}
+.menu {
+    color:$Dark;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.6px;
+
+    &__item {
+    }
+    &__item:last-child{
+    }
+    &__link {
+            color: inherit;
+    }
+    &__link_with-point::after{
+            position: relative;
+            content: "\2022";
+            color: red;
+            top: -6px;
+            left: 1px;
+    }
+    &__link_bold {
+        color: $Purple;
+    }
+    .link__img {
+    }
+}
+
+@media(max-width: 1430px){
+    ._container{
+        max-width: 1149px;
+    }
+    .header{
+    &__container {
+    }
+    &__main{
+        margin: 0 317px 0 0px;
+    }
+    &__menu {
+        gap: 40px;
+    }
+    }
+}
+@media(max-width: 1149px){
+    ._container{
+        max-width: 769px;
+        margin: 0 auto;
+    }
+    .header{
+    &__main{
+        margin: 0 183px 0 0px;
+    }
+    &__menu {
+        gap: 30px;
+    }
+    &__text-ul{
+        display: none !important;
+    }
+    }
+}
+@media(max-width: 769px){
+    ._container{
+        max-width: 769px;
+    }
+    .header{
+    &__main{
+        margin: 0 10px 0 0;
+    }
+    &__menu{
+        flex-wrap: wrap;
+        gap:20px;
+    }
+    }
+    .menu{
+        line-height: 40px;
+    }
+    .link__img{
+        height: 70%;
+        width: 15%;
+    }
+}
+@media(max-width: 579px){
+    .header{
+        &__container{
+            height: 30px;
+        }
+        &__main{
+            margin: 0 20px 0 0;
+        }
+        &__menu{
+            flex-wrap: wrap;
+            gap:13px;
+        }
+        &__logo{
+            font-size: 22px;
+        }
+    }
+    .menu{
+        line-height: 5px;
+        font-size: 15px;
+    }
+    
+}
