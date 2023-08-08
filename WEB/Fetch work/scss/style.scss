@@ -1,0 +1,52 @@
+.wrapper{
+    font-size: 16px;
+    padding: 20px;
+    &>*:not(:last-child){
+        margin-bottom: 80px;
+    }
+}
+.header {
+}
+
+.content {
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__row {
+        gap: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+    .row {
+    }
+    &__card {
+    }
+}
+.card {
+    // border-radius: 10px;
+    max-width: 250px;
+    &-body {
+    }
+    &-title {
+        font-weight: 700;
+        font-size: 1.4em;
+    }
+    &-text {
+    }
+}
+
+.footer {
+    &__btn-group {
+    }
+    .btn-group {
+    }
+    &__butt {
+        font-size: 1.2em;
+        color: blue;
+    }
+}
