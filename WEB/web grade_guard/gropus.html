@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<<<<<<<< HEAD:userslogin/templates/userlog/index.html
+{% load static %}
+
+
+========
+>>>>>>>> a0914544758f305fd7a0472d219989e07e3d7341:web/gropus.html
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<<<<<<<< HEAD:userslogin/templates/userlog/index.html
+    <link rel="stylesheet" href="{% static "css\autoriz.css" %}">
+</head>
+<body>
+    <form method = 'POST'> {% csrf_token %}
+    <div class="wrapper">
+        <header class="header">Header</header>
+        <div class="content">
+            <div class="autoriz">
+                <form action="#" method="get" class="autoriz__form">
+                     <div class="autoriz__form-title">Авторизация</div>
+                     <a href = "{% url 'register' %}">Зарегистрироваться</a>
+                        <input class="autoriz__form-input" type="text"  name="userlog" placeholder="Логин">
+                        <input class="autoriz__form-input" type="password" name="userpas" placeholder="Пароль">
+                        <div class="autoriz__form-check">
+                            <input disabled class="autoriz__form-check" type="checkbox">   Запомнить
+                        </div>
+                        <button class="autoriz__form-butt" type="submit">Вход</button>
+                    </div>
+                </form>
+========
+    <link rel="stylesheet" href="css/groups.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__img">
+                <img src="/img/Gerb.jpg" alt="Gerb">
+            </div>
+            <ul class="header__nav">
+                <li class="header__item"><a href="">Группа</a></li>
+                <li class="header__item"><a href="">Группа</a></li>
+                <li class="header__item"><a href="">Группа</a></li>
+                <li class="header__item"><a href="">Группа</a></li>
+                
+            </ul>
+        </header>
+        <div class="content">
+            <div class="content__head">Группа</div>
+            <div class="content__spisok">
+                <a href="#" class="content__item">О712Б</a>
+                <a href="#" class="content__item">О712Б</a>
+                <a href="#" class="content__item">О712Б</a>
+>>>>>>>> a0914544758f305fd7a0472d219989e07e3d7341:web/gropus.html
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer__row">
+                <div class="footer__authors">
+                    Авторы: <br>
+                    <a href="https://vk.com/ru.bachatero">Максим Булычев</a><br>
+                    <a href="https://vk.com/firsang">Георгий Фирсанов</a><br>
+                    <a href="https://vk.com/dos100evskiy">Андрей Юрков</a><br>
+                    <a href="https://vk.com/zl0i_belyi">Владислав Квасюк</a> <br>
+                </div>
+                <div class="footer__goal">
+                    Сделано в качестве проекта по компьютерному практикуму
+                </div>
+            </div>
+        </footer>
+    </div>
+<<<<<<<< HEAD:userslogin/templates/userlog/index.html
+    </form>
+========
+>>>>>>>> a0914544758f305fd7a0472d219989e07e3d7341:web/gropus.html
+</body>
+</html>

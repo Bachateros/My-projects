@@ -1,0 +1,150 @@
+@import "/css/zero_style.css";
+@import "./general_style.scss";
+@import "./extend.scss";
+
+$bgColor: rgb(232, 223, 57);
+$bgColor-: rgb(201, 194, 51);
+$bgColor--: rgb(137, 132, 36);
+
+.content{
+    flex: 1 1 auto;
+    display: block;
+    color: #fff;
+    &__form {
+        display: flex;
+        justify-content: center;
+        column-gap: 10px;
+    }
+    &__title {
+        font-size: 36px;
+        letter-spacing: -1.5px;
+        font-weight: 700;
+        margin: 10px;
+    }
+    .form {
+        &__table {
+            display: grid;
+            row-gap: 10px;
+            width: 100%;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+        }
+        .table {
+            border: 3px solid white;
+            &__row {
+                display: flex;
+            }
+            &__row_main {
+            }
+            &>*>*:first-child{
+                color: #0f0;
+                font-size: 16px;
+                padding: 1% 0;
+                align-self: center;
+            }
+            .row {
+                height: 100%;
+                &__item {
+                    display: inline-block;
+                    flex: 1 1 auto;
+                    border: 1px solid white;
+                }
+                &__item_main {
+                    font-size: 20px;
+                    font-weight: 600;
+                    letter-spacing: 0px;
+                    .row__item{
+                    }
+                }
+                &__item_add {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    &>*:last-child{
+                        width: 100%;
+                        //flex: 1 1 auto;
+                        color: #f00;
+                        display: flex;
+                        justify-content: space-evenly;
+                        align-items: center;
+                        &>*{
+                            flex: 1 1 auto;
+                            padding: 1% 0;
+                            border: 1px solid white;
+                        }
+                    }
+                    .row__item{
+                    }
+                }
+                &_item {
+                    
+                }
+                &__pole {
+                    
+                }
+            }
+        .row_head{
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: minmax(100px, 200px) minmax(100px,3fr) minmax(100px, 6fr) minmax(100px, 5fr) repeat(3, minmax(100px, 1fr));
+        }
+        .row_student{
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: minmax(100px,200px) repeat(14, minmax(20px, 1fr)) repeat(3, minmax(100px, 1fr));
+            .row__pole{
+
+                &>*{
+                    background: inherit;
+                    color: #fff;
+                    margin: 2px;
+                    font-size: 1.2em;
+                    text-align: center;
+                    width: 90%;
+                    &:focus{
+                        box-shadow: 0 0 3px 2px #eff;
+                        
+                    }
+                }
+                
+            }
+            .row__item{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 18px;
+            }
+            .row__item_main {
+                font-size: 1.4em;
+            }
+        }
+        }
+        &__buttons {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            row-gap: 20px;
+            width: 8%;
+            &>*{
+                font-size: 18px;
+                color: #191919;
+                letter-spacing: -.5px;
+                //line-height: 10px;
+                height: 35px;
+                border-radius: 5px;
+                background: $bgColor;
+                &:hover{
+                    background: $bgColor-;
+                }
+                &:active{
+                    background: $bgColor--;
+                    color: #e0e0e0;
+                }
+            }
+        }
+        &__save {
+        }
+        &__cancel {
+        }
+    }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/test.css">
+</head>
+<body>
+    <body>
+        <div class="wrapper">
+            <header class="header">Header</header>
+            <div class="content">
+                <div class="content__tables">
+                    <div class="content__table table_main">
+                        <h2 class="table_main__title">Общее количество баллов</h2>
+                        <div class="table_main__row">
+                            <div class="table_main__name">Тесты Moodle</div>
+                            <div class="table_main__score">20</div>
+                        </div>
+                        <div class="table_main__row">
+                            <div class="table_main__name">Посещения</div>
+                            <div class="table_main__score">10</div>
+                        </div>
+                        <div class="table_main__row">
+                            <div class="table_main__name">Лабы</div>
+                            <div class="table_main__score">20</div>
+                        </div>
+                        <div class="table_main__row">
+                            <div class="table_main__name">Доп баллы</div>
+                            <div class="table_main__score">20</div>
+                        </div>
+                        <div class="table_main__row table_main__row_general">
+                            <div class="table_main__name">Сумма баллов</div>
+                            <div class="table_main__score">20</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer">
+                <div class="footer__row">
+                    <div class="footer__authors">
+                        Авторы:
+                        <a href="https://vk.com/ru.bachatero">Максим Булычев</a>
+                        <a href="https://vk.com/firsang">Георгий Фирсанов</a>
+                        <a href="https://vk.com/dos100evskiy">Андрей Юрков</a>
+                        <a href="https://vk.com/zl0i_belyi">Владислав Квасюк</a>
+                    </div>
+                    <div class="footer__goal">
+                        Сделано в качестве проекта по компьютерному практикуму
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+    
+    <script>
+        $(function()
+        {
+            $('td').click(function()	{
+            var val = $(this).html();	//получаем значение ячейки
+            //формируем код текстового поля
+            var code = '<input type="text" id="edit" value="'+val+'" />';
+            //удаляем содержимое ячейки, вставляем в нее сформированное поле
+            $(this).empty().append(code);
+            //устанавливаем фокус на свеженарисованное поле
+            $('#edit').focus();
+	    });
+        });
+    </script>
+</body>
+</html>

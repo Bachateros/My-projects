@@ -1,0 +1,17 @@
+@import "/css/zero_style.css";
+@import "/css/general_style.css";
+@import "./extend.scss";
+
+.content{
+    &__head{
+        @extend %head;
+    }
+    &__spisok{
+
+        @extend %spisok;
+    }
+    &__item{
+
+        @extend %item;
+    }
+}

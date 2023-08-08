@@ -1,0 +1,26 @@
+@import "/css/zero_style.css";
+@import "/css/general_style.css";
+.content {
+  color: white;
+}
+.content__table {
+  border: 3px solid white;
+}
+.content .table_main {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: minmax(300px, 1400px);
+  row-gap: 10px;
+}
+.content .table_main__title {
+  justify-self: center;
+  font-size: 30px;
+}
+.content .table_main__row {
+  display: grid;
+  grid-template-columns: 1fr 40px;
+  font-size: 24px;
+}
+.content .table_main__row_general {
+  font-weight: 700;
+}

@@ -1,0 +1,74 @@
+@import "/css/zero_style.css";
+@import "/css/general_style.css";
+
+$darkRed: #5c1b1b;
+$blue: rgb(8, 97, 180);
+$grey: #3a3838;
+.content {
+    
+    &__autoriz {
+        border-radius: 50px;
+        box-shadow: 0 0 50px 50px  $darkRed;
+    }
+    .autoriz {
+        &__form {
+            display: flex;
+            flex-direction: column;
+            background-color: $blue;
+            height: 400px;
+            width: 300px;
+            border: 3px solid black;
+            border-radius: 8px;
+            font-size: 32px;
+            box-shadow: 3px -3px 7px 1px black; 
+        }
+    }
+    .form {
+        //background: #4c1616;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        &__title {
+            letter-spacing: 1.5px;
+            align-self: center;
+            padding: 5px;
+            border-bottom: 3px solid $grey;
+            color: #fff;
+        }
+        &__input {
+            min-height: 12%;
+            width: 90%;
+            border-radius: 5px;
+            padding: 5px;
+            font-size: 80%;
+            //margin-bottom: 10px;
+            &:focus{
+                box-shadow: 0 0 3px 2px #eff;
+            }
+            font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+            letter-spacing: 0.3px;
+        }
+        &__check {
+            color: #fff;
+            //background: $grey;
+        }
+        &__butt {
+            width: 120px;
+            height: 40px;
+            align-self: center;
+            background: #fafafa;
+            border-radius: 5px;
+            font-size: 80%;
+            letter-spacing: 2px;
+            box-shadow: 1px 1px 1px 1px #f6f6f6;
+            &:hover{
+                background: #f2f2f2;
+            }
+            &:active{
+                background: #d7cfcf;
+                box-shadow: 1px 1px 1px 1px #818181;
+            }
+        }
+    }
+}

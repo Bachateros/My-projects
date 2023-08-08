@@ -1,0 +1,35 @@
+table, td, th, caption{
+    border: 1px solid grey;
+}
+table{
+    border-collapse: collapse;
+    margin-top: 15%;
+    margin-left: 5%;
+    width: 90%;
+}
+caption{
+    font-weight: 700;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+th{
+    padding: 10px;
+}
+td{
+    padding: 5px;
+    padding-left: 10px;
+    
+}
+.left{
+    width:40%;
+}
+footer{
+    background-color: rgb(211, 205, 205);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    margin-top: 10%;
+    padding: 2%;
+    padding-left: 5%;
+}
+.include{
+    padding-left: 30px;
+}

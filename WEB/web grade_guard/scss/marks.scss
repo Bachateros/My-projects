@@ -1,0 +1,113 @@
+@import "/css/zero_style.css";
+@import "/css/general_style.css";
+@import "./extend.scss";
+
+.content {
+    color: white;
+    &__tables {
+        padding: 100px;
+        &>*:not(:last-child){
+            margin-bottom: 100px;
+        }
+    }
+    &__table {
+        border: 3px solid white;
+        padding: 10px;
+    }
+    .table{
+        display: grid;
+        grid-template-columns: minmax(300px, 1400px);
+        row-gap: 10px;
+        &__title {
+            
+        }
+        &__row {
+            display: grid;
+            font-size: 24px;
+        }
+        &__name {
+        }
+        &__score {
+
+        }
+
+    }
+    .title{
+        font-size: 30px;
+    }
+    .table_main {
+        
+        grid-template-rows: repeat(5,1fr);
+        
+        &__title{
+            justify-self: center;
+        }
+        .row{
+            grid-template-columns: 1fr 40px;
+            border-bottom: 1px dotted blue;            
+        }
+        &__row_general{
+            border: 3px solid blueviolet ;
+            font-weight: 700;
+        }
+    }
+    .table_specific{
+        grid-template-rows: repeat(3,1fr);
+        gap: 0px;
+        &__title{
+            margin-bottom: 15px;
+        }
+        .row {
+            &>*{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            //grid-template-columns: .5fr repeat(auto,200px);
+            &__name {
+                border: 2px solid white;
+                &:first-child{
+                    grid-column-start: 2;
+                }
+                grid-column: span 1;
+                
+            }
+            &__score {
+                border: 2px solid white;
+                &:first-child{
+                    grid-column-start: 2;
+                }
+                grid-column: span 1;
+            }
+        }
+    }
+    .table_moodle {
+        .row {
+            grid-template-columns: .3fr repeat(3,200px);
+        }
+    }
+    .table_visits{
+        .row{
+            grid-template-columns: .1fr repeat(6,minmax(100px,1fr)) .1fr;
+        }
+    }
+    .table_labs{
+        .row{
+            grid-template-columns: .1fr repeat(6,minmax(100px,1fr)) .1fr;
+        }
+    }
+    .table_addition{
+        .row {
+            grid-template-columns: .3fr repeat(3,200px);
+        }
+    }
+    &__link {
+        @extend %item;
+        // font-size: 40px;
+        // display: inline-block;
+        // background: $rusty;
+        & a{
+            color: black;
+        }
+    }
+}
